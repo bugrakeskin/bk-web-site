@@ -3,33 +3,39 @@
     <div class="container mx-auto px-4 py-16">
       <div class="max-w-3xl mx-auto">
         <h1 class="text-4xl font-bold mb-8 animate-fade-in text-gray-900 dark:text-white">About Me</h1>
-        
+
         <div class="prose lg:prose-xl dark:prose-invert animate-slide-up">
           <p class="mb-6 text-gray-700 dark:text-gray-300">
-            Hello! I'm a passionate web developer with a keen eye for design and a love for creating 
-            seamless user experiences. My journey in web development started with curiosity and has 
-            evolved into a professional pursuit of excellence in creating digital solutions.
+            Hello! I'm a passionate DevOps Engineer with extensive experience in cloud infrastructure and automation. My expertise spans across various DevOps technologies including Kubernetes, Docker, AWS, and CI/CD pipelines. I excel at bridging the gap between development and operations, ensuring smooth deployment processes and robust
+            infrastructure management. My journey started with system administration and has evolved into architecting scalable cloud solutions with a focus on automation, security, and reliability.
           </p>
 
           <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Skills</h2>
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div v-for="skill in skills" :key="skill.name" 
-                 class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div v-for="skill in skills" :key="skill.name" class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 class="font-medium text-gray-900 dark:text-white">{{ skill.name }}</h3>
               <div class="mt-2 h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
-                <div class="h-full bg-blue-500 rounded-full" 
-                     :style="{ width: skill.level + '%' }"></div>
+                <div class="h-full bg-amber-500 dark:bg-amber-400 rounded-full" :style="{ width: skill.level + '%' }"></div>
               </div>
             </div>
           </div>
 
           <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Experience</h2>
           <div class="space-y-6">
-            <div v-for="exp in experience" :key="exp.company" 
-                 class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div v-for="exp in experience" :key="exp.company" class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <h3 class="font-semibold text-xl text-gray-900 dark:text-white">{{ exp.position }}</h3>
               <p class="text-gray-600 dark:text-gray-400">{{ exp.company }} | {{ exp.period }}</p>
               <p class="mt-2 text-gray-700 dark:text-gray-300">{{ exp.description }}</p>
+            </div>
+          </div>
+          <div class="mt-12 border-t border-gray-200 dark:border-gray-700 pt-8">
+            <div class="text-center">
+              <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Want to know more?</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">Check out my detailed CV for my full experience and qualifications</p>
+              <a href="/Buğra-Keskin-ENG.pdf" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200">
+                <span class="text-lg">View Full CV</span>
+                <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -39,29 +45,7 @@
 </template>
 
 <script setup>
-const skills = [
-  { name: 'Frontend Development', level: 90 },
-  { name: 'Backend Development', level: 85 },
-  { name: 'UI/UX Design', level: 75 },
-  { name: 'Database Management', level: 80 },
-  { name: 'DevOps', level: 70 },
-  { name: 'Project Management', level: 85 }
-]
-
-const experience = [
-  {
-    position: 'Senior Web Developer',
-    company: 'Tech Company',
-    period: '2020 - Present',
-    description: 'Leading development of web applications using modern technologies.'
-  },
-  {
-    position: 'Full Stack Developer',
-    company: 'Digital Agency',
-    period: '2018 - 2020',
-    description: 'Developed and maintained multiple client projects using various web technologies.'
-  }
-]
+import { experience, skills } from "~/data/experience";
 </script>
 
 <style scoped>
@@ -74,8 +58,12 @@ const experience = [
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {

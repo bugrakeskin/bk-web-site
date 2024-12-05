@@ -10,17 +10,18 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/ui-pro": "^1.5.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "@vueuse/core": "^10.4.1",
     "gsap": "^3.12.2",
-    "sass": "^1.67.0",
-    "@nuxt/ui-pro": "^1.5.0",
     "nuxt": "^3.14.1592",
+    "sass": "^1.67.0",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "@nuxt/ui": "^2.19.2"
+    "@nuxt/ui": "^2.19.2",
+    "@nuxtjs/tailwindcss": "^6.8.0"
   }
 }

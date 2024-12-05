@@ -5,46 +5,52 @@
         <NuxtLink to="/" class="flex items-center space-x-2 text-xl font-bold text-gray-900 dark:text-white">
           <img src="~/assets/bklogo.png" alt="BK Logo" class="h-8 w-auto dark:hidden" />
           <img src="~/assets/bklogo-dark.png" alt="BK Logo Dark" class="h-8 w-auto hidden dark:block" />
-          <span>BK</span>
+          <span class="logo-text">BK</span>
         </NuxtLink>
 
-        <div class="flex items-center space-x-8">
+        <div class="flex items-center space-x-2 md:space-x-8">
           <div class="hidden md:flex space-x-8">
             <NuxtLink v-for="item in menuItems" :key="item.path" :to="item.path" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               {{ item.name }}
             </NuxtLink>
           </div>
 
+          <UButton size="sm" color="amber" variant="solid" target="_blank" to="/Buğra-Keskin-ENG.pdf" class="hidden md:flex">
+            <UIcon name="i-heroicons-document-text" class="w-4 h-4 mr-1" />
+            My.Resume.[PDF]
+          </UButton>
+
           <!-- Theme Toggle Button -->
           <ColorModeButton />
-        </div>
 
-        <!-- Mobile menu button -->
-        <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-gray-600 dark:text-gray-300">
-          <span class="sr-only">Open menu</span>
-          <div class="w-6 h-6 flex items-center justify-center">
-            <span v-if="!isMenuOpen">☰</span>
-            <span v-else>✕</span>
-          </div>
-        </button>
+          <!-- Mobile menu button -->
+          <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-gray-600 dark:text-gray-300 p-2">
+            <span class="sr-only">Open menu</span>
+            <div class="w-7 h-7 flex items-center justify-center text-xl">
+              <UIcon v-if="!isMenuOpen" name="i-heroicons-bars-3" class="w-6 h-6" />
+              <UIcon v-else name="i-heroicons-x-mark" class="w-6 h-6" />
+            </div>
+          </button>
+        </div>
       </div>
     </div>
 
     <!-- Mobile menu -->
-    <div v-if="isMenuOpen" class="md:hidden bg-white dark:bg-gray-900">
-      <div class="px-2 pt-2 pb-3 space-y-1">
+    <div v-if="isMenuOpen" class="md:hidden bg-white dark:bg-gray-900 shadow-lg">
+      <div class="px-4 pt-2 pb-3 space-y-2">
         <NuxtLink v-for="item in menuItems" :key="item.path" :to="item.path" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" @click="isMenuOpen = false">
           {{ item.name }}
         </NuxtLink>
+        <UButton size="sm" color="amber" variant="solid" target="_blank" to="/Buğra-Keskin-ENG.pdf" class="w-full mt-2">
+          <UIcon name="i-heroicons-document-text" class="w-4 h-4 mr-1" />
+          My.Resume.[PDF]
+        </UButton>
       </div>
     </div>
   </nav>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import ColorModeButton from "./ColorModeButton.vue";
-
 const isMenuOpen = ref(false);
 
 const menuItems = [
