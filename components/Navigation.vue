@@ -2,7 +2,11 @@
   <nav class="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-sm z-50 shadow-sm">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center h-16">
-        <NuxtLink to="/" class="text-xl font-bold text-gray-900 dark:text-white">Portfolio</NuxtLink>
+        <NuxtLink to="/" class="flex items-center space-x-2 text-xl font-bold text-gray-900 dark:text-white">
+          <img src="~/assets/bklogo.png" alt="BK Logo" class="h-8 w-auto dark:hidden" />
+          <img src="~/assets/bklogo-dark.png" alt="BK Logo Dark" class="h-8 w-auto hidden dark:block" />
+          <span>BK</span>
+        </NuxtLink>
 
         <div class="flex items-center space-x-8">
           <div class="hidden md:flex space-x-8">
