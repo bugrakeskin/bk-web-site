@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-pro",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,12 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@vueuse/core": "^10.4.1",
+    "gsap": "^3.12.2",
+    "sass": "^1.67.0",
     "@nuxt/ui-pro": "^1.5.0",
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@nuxt/ui": "^2.19.2"
   }
 }
