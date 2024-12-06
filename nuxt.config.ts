@@ -8,9 +8,9 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Raleway: [500, 600, 700],
-      'Open+Sans': [400, 500, 600]
+      "Open+Sans": [400, 500, 600],
     },
-    display: 'swap'
+    display: "swap",
   },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
@@ -26,8 +26,13 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-        { rel: "manifest", href: "/manifest.json" }
-      ]
-    }
+        { rel: "manifest", href: "/manifest.json" },
+      ],
+    },
+  },
+  runtimeConfig: {
+    public: {
+      baseurl: process.env.BASE_URL ?? "http://localhost:3000",
+    },
   },
 });
