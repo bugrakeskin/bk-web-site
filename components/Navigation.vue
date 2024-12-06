@@ -23,7 +23,7 @@
           </UButton>
 
           <!-- Theme Toggle Button -->
-          <ColorModeButton />
+          <UColorModeButton />
 
           <!-- Mobile menu button -->
           <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-gray-600 dark:text-gray-300 p-2">

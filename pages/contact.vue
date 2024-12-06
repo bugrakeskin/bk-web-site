@@ -47,6 +47,8 @@
 </template>
 
 <script setup>
+import emailjs from '@emailjs/browser';
+
 const formData = ref({
   name: "",
   email: "",
@@ -60,8 +62,16 @@ async function handleSubmit() {
   isSubmitting.value = true;
 
   try {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await emailjs.send(
+      'YOUR_SERVICE_ID', // Email.js service ID
+      'YOUR_TEMPLATE_ID', // Email.js template ID
+      {
+        from_name: formData.value.name,
+        from_email: formData.value.email,
+        message: formData.value.message,
+      },
+      'YOUR_PUBLIC_KEY' // Email.js public key
+    );
 
     toast.add({
       title: "Success!",
