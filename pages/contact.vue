@@ -6,14 +6,17 @@
       <form @submit.prevent="handleSubmit" class="space-y-6">
         <UFormGroup label="Name">
           <UInput v-model="formData.name" placeholder="Enter your name" size="lg" color="amber" required />
+          <div v-if="errors.name" class="text-red-500 text-sm">{{ errors.name }}</div>
         </UFormGroup>
 
         <UFormGroup label="Email">
           <UInput v-model="formData.email" type="email" placeholder="Enter your email" size="lg" color="amber" required />
+          <div v-if="errors.email" class="text-red-500 text-sm">{{ errors.email }}</div>
         </UFormGroup>
 
         <UFormGroup label="Message">
           <UTextarea v-model="formData.message" placeholder="Write your message here..." size="lg" color="amber" :rows="4" required />
+          <div v-if="errors.message" class="text-red-500 text-sm">{{ errors.message }}</div>
         </UFormGroup>
 
         <UButton type="submit" color="amber" variant="solid" size="lg" class="w-full" :loading="isSubmitting">
@@ -47,8 +50,6 @@
 </template>
 
 <script setup>
-import emailjs from '@emailjs/browser';
-
 const formData = ref({
   name: "",
   email: "",
@@ -57,21 +58,55 @@ const formData = ref({
 
 const isSubmitting = ref(false);
 const toast = useToast();
+const mail = useMail();
+
+// Form validation
+const errors = ref({});
+
+function validateForm() {
+  errors.value = {};
+
+  if (!formData.value.name.trim()) {
+    errors.value.name = "Name is required";
+  }
+
+  if (!formData.value.email.trim()) {
+    errors.value.email = "Email is required";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.value.email)) {
+    errors.value.email = "Please enter a valid email address";
+  }
+
+  if (!formData.value.message.trim()) {
+    errors.value.message = "Message is required";
+  }
+
+  return Object.keys(errors.value).length === 0;
+}
 
 async function handleSubmit() {
+  if (!validateForm()) {
+    toast.add({
+      title: "Validation Error",
+      description: "Please check the form for errors.",
+      color: "red",
+    });
+    return;
+  }
+
   isSubmitting.value = true;
 
   try {
-    await emailjs.send(
-      'YOUR_SERVICE_ID', // Email.js service ID
-      'YOUR_TEMPLATE_ID', // Email.js template ID
-      {
-        from_name: formData.value.name,
-        from_email: formData.value.email,
-        message: formData.value.message,
-      },
-      'YOUR_PUBLIC_KEY' // Email.js public key
-    );
+    await mail.send({
+      from: formData.value.email,
+      subject: `[Website Contact] ${formData.value.name} - Personal Website Contact Form`,
+      text: `
+Name: ${formData.value.name}
+Email: ${formData.value.email}
+
+Message:
+${formData.value.message}
+      `,
+    });
 
     toast.add({
       title: "Success!",
@@ -86,9 +121,10 @@ async function handleSubmit() {
       message: "",
     };
   } catch (error) {
+    console.error("Mail error:", error);
     toast.add({
       title: "Error",
-      description: "Failed to send message. Please try again.",
+      description: "Failed to send message. Please try again later or use alternative contact methods below.",
       color: "red",
     });
   } finally {

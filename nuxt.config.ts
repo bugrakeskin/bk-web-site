@@ -3,7 +3,25 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   extends: ["@nuxt/ui-pro"],
-  modules: ["@nuxt/ui", "@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
+    "nuxt-mail"
+  ],
+  mail: {
+    message: {
+      to: process.env.NUXT_MAIL_TARGET,
+    },
+    smtp: {
+      host: process.env.NUXT_MAIL_SMPT,
+      port: process.env.NUXT_MAIL_PORT,
+      auth: {
+        user: process.env.NUXT_MAIL_USERNAME,
+        pass: process.env.NUXT_MAIL_PASSWORD,
+      },
+    },
+  },
   css: ["~/assets/css/main.scss"],
   googleFonts: {
     families: {
