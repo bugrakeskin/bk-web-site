@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <h1 class="text-4xl font-bold mb-8 animate-fade-in text-gray-900 dark:text-white">About Me</h1>
+  <div class="container mx-auto mt-24">
+    <h1 class="text-4xl font-bold mb-8 text-gray-900 dark:text-white">About Me</h1>
 
-    <div class="prose lg:prose-xl dark:prose-invert animate-slide-up">
-      <p class="mb-6 text-gray-700 dark:text-gray-300">
-        Hello! I'm a passionate DevOps Engineer with extensive experience in cloud infrastructure and automation. My expertise spans across various DevOps technologies including Kubernetes, Docker, AWS, and CI/CD pipelines. I excel at bridging the gap between development and operations, ensuring smooth deployment processes and robust
-        infrastructure management. My journey started with system administration and has evolved into architecting scalable cloud solutions with a focus on automation, security, and reliability.
+    <div class="prose dark:prose-invert max-w-none">
+      <p class="text-gray-700 dark:text-gray-300 text-justify">
+        Hello! I'm a passionate DevOps Engineer with extensive experience in cloud infrastructure and automation. My expertise spans across various DevOps technologies including Kubernetes, Docker, AWS, and CI/CD pipelines. I excel at bridging the gap between development and operations, ensuring smooth deployment processes and robust infrastructure
+        management. My journey started with system administration and has evolved into architecting scalable cloud solutions with a focus on automation, security, and reliability.
       </p>
 
       <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div v-for="skill in skills" :key="skill.name" class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
           <h3 class="font-medium text-gray-900 dark:text-white">{{ skill.name }}</h3>
           <div class="mt-2 h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
@@ -26,12 +26,13 @@
           <p class="mt-2 text-gray-700 dark:text-gray-300">{{ exp.description }}</p>
         </div>
       </div>
-      <div class="mt-12 border-t border-gray-200 dark:border-gray-700 pt-8">
+
+      <div class="mt-8 border-t border-gray-200 dark:border-gray-700 mb-8">
         <div class="text-center">
-          <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Want to know more?</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-6">Check out my detailed CV for my full experience and qualifications</p>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Want to know more?</h3>
+          <p class="text-gray-600 dark:text-gray-400">Check out my detailed CV for my full experience and qualifications</p>
           <a href="/Buğra-Keskin-ENG.pdf" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200">
-            <span class="text-lg">View Full CV</span>
+            <span class="text-lg">View Resume</span>
             <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-5 h-5" />
           </a>
         </div>
@@ -41,34 +42,34 @@
 </template>
 
 <script setup>
-import { experience } from '~/data/experience'
-import { onMounted } from 'vue'
-import { gsap } from 'gsap'
+import { experience } from "~/data/experience";
+import { onMounted } from "vue";
+import { gsap } from "gsap";
 
 const skills = [
-  { name: 'DevOps', level: 90 },
-  { name: 'AWS', level: 85 },
-  { name: 'Kubernetes', level: 85 },
-  { name: 'Docker', level: 90 },
-  { name: 'CI/CD', level: 85 },
-  { name: 'Infrastructure as Code', level: 80 },
-]
+  { name: "DevOps", level: 90 },
+  { name: "AWS", level: 85 },
+  { name: "Kubernetes", level: 85 },
+  { name: "Docker", level: 90 },
+  { name: "CI/CD", level: 85 },
+  { name: "Infrastructure as Code", level: 80 },
+];
 
 onMounted(() => {
-  gsap.from('.animate-fade-in', {
+  gsap.from(".animate-fade-in", {
     opacity: 0,
     duration: 1,
-    ease: 'power2.out',
-  })
+    ease: "power2.out",
+  });
 
-  gsap.from('.animate-slide-up', {
+  gsap.from(".animate-slide-up", {
     y: 50,
     opacity: 0,
     duration: 1,
     delay: 0.5,
-    ease: 'power2.out',
-  })
-})
+    ease: "power2.out",
+  });
+});
 </script>
 
 <style scoped>

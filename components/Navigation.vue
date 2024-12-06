@@ -3,12 +3,14 @@
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <NuxtLink to="/" class="flex items-center space-x-2 text-xl font-bold text-gray-900 dark:text-white">
-          <img src="~/assets/bklogo.png" alt="BK Logo" class="h-8 w-auto dark:hidden" />
-          <img src="~/assets/bklogo-dark.png" alt="BK Logo Dark" class="h-8 w-auto hidden dark:block" />
+          <div class="relative w-8 h-8">
+            <img src="~/assets/bklogo.png" alt="BK Logo" class="absolute inset-0 w-full h-full dark:hidden" />
+            <img src="~/assets/bklogo-dark.png" alt="BK Logo Dark" class="absolute inset-0 w-full h-full hidden dark:block" />
+          </div>
           <span class="logo-text">BK</span>
         </NuxtLink>
 
-        <div class="flex items-center space-x-2 md:space-x-8">
+        <div class="flex items-center md:space-x-8">
           <div class="hidden md:flex space-x-8">
             <NuxtLink v-for="item in menuItems" :key="item.path" :to="item.path" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               {{ item.name }}
@@ -16,8 +18,8 @@
           </div>
 
           <UButton size="sm" color="amber" variant="solid" target="_blank" to="/Buğra-Keskin-ENG.pdf" class="hidden md:flex">
-            <UIcon name="i-heroicons-document-text" class="w-4 h-4 mr-1" />
-            My.Resume.[PDF]
+            <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-4 h-4 mr-1" />
+            My Resume [PDF]
           </UButton>
 
           <!-- Theme Toggle Button -->
@@ -42,8 +44,8 @@
           {{ item.name }}
         </NuxtLink>
         <UButton size="sm" color="amber" variant="solid" target="_blank" to="/Buğra-Keskin-ENG.pdf" class="w-full mt-2">
-          <UIcon name="i-heroicons-document-text" class="w-4 h-4 mr-1" />
-          My.Resume.[PDF]
+          <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-4 h-4 mr-1" />
+          My Resume [PDF]
         </UButton>
       </div>
     </div>

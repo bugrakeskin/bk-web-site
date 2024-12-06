@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="text-4xl font-bold mb-8 text-center animate-fade-in text-gray-900 dark:text-white">Get in Touch</h1>
+  <div class="space-y-8 w-full max-w-lg mt-24">
+    <h1 class="text-4xl font-bold text-center animate-fade-in text-gray-900 dark:text-white">Get in Touch</h1>
 
     <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8 animate-slide-up">
       <form @submit.prevent="handleSubmit" class="space-y-6">

@@ -1,18 +1,14 @@
 <template>
-  <div class="min-h-screen bg-gray-100 dark:bg-gray-800">
+  <UContainer class="min-h-screen bg-gray-50 dark:bg-gray-800 max-w-full mx-auto px-4">
     <Navigation />
-    <main class="pt-16">
-      <div class="container mx-auto px-4 py-8 md:py-16">
-        <div class="max-w-4xl mx-auto">
-          <slot />
-        </div>
-      </div>
+    <main class="flex items-center justify-center min-h-[calc(100vh-4rem)]">
+      <slot />
     </main>
-  </div>
+  </UContainer>
 </template>
 
 <script setup>
-import Navigation from '@/components/Navigation.vue'
+import Navigation from "@/components/Navigation.vue";
 </script>
 
 <style>
