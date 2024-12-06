@@ -1,5 +1,5 @@
 {
-  "buildCommand": "NITRO_PRESET=vercel-edge nuxt build",
-  "devCommand": "nuxt dev",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
   "installCommand": "npm install"
 }

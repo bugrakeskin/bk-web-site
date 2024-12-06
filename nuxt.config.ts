@@ -35,4 +35,7 @@ export default defineNuxtConfig({
       baseurl: process.env.BASE_URL ?? "http://localhost:3000",
     },
   },
+  nitro: {
+    preset: 'vercel'
+  }
 });
