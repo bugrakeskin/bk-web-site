@@ -26,28 +26,12 @@
 <script setup>
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with cart, checkout, and payment integration.",
+    title: "Shopping List App",
+    description: "A simple shopping list application.",
     image: "https://picsum.photos/800/600?random=1",
-    technologies: ["Vue.js", "Node.js", "MongoDB"],
-    demo: "https://demo.example.com",
-    github: "https://github.com/example/project",
-  },
-  {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates.",
-    image: "https://picsum.photos/800/600?random=2",
-    technologies: ["React", "Firebase", "Material-UI"],
-    demo: "https://demo.example.com",
-    github: "https://github.com/example/project",
-  },
-  {
-    title: "Weather Dashboard",
-    description: "A weather dashboard showing forecasts and historical data.",
-    image: "https://picsum.photos/800/600?random=3",
-    technologies: ["Vue.js", "OpenWeather API", "Chart.js"],
-    demo: "https://demo.example.com",
-    github: "https://github.com/example/project",
+    technologies: ["Vue.js", "Nuxt.js", "Supabase Realtime Database", "Nuxt-UI", "Pinia"],
+    demo: "https://shoppinlistv2.vercel.app",
+    github: "https://github.com/bugrakeskin/Shopping-List-v2",
   },
 ];
 </script>

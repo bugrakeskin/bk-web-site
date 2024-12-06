@@ -9,16 +9,30 @@
       </p>
 
       <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div v-for="skill in skills" :key="skill.name" class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="font-medium text-gray-900 dark:text-white">{{ skill.name }}</h3>
+
+      <!-- DevOps Skills -->
+      <h3 class="text-xl font-medium mb-4 text-gray-800 dark:text-gray-200">DevOps & Infrastructure</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <div v-for="skillName in skillCategories.devops" :key="skillName" class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="font-medium text-gray-900 dark:text-white">{{ skillName }}</h3>
           <div class="mt-2 h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
-            <div class="h-full bg-amber-500 dark:bg-amber-400 rounded-full" :style="{ width: skill.level + '%' }"></div>
+            <div class="h-full bg-amber-500 dark:bg-amber-400 rounded-full" :style="{ width: skills.find((s) => s.name === skillName).level + '%' }"></div>
           </div>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Experience</h2>
+      <!-- Frontend Skills -->
+      <h3 class="text-xl font-medium mb-4 text-gray-800 dark:text-gray-200">Frontend Development</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <div v-for="skillName in skillCategories.frontend" :key="skillName" class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="font-medium text-gray-900 dark:text-white">{{ skillName }}</h3>
+          <div class="mt-2 h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+            <div class="h-full bg-amber-500 dark:bg-amber-400 rounded-full" :style="{ width: skills.find((s) => s.name === skillName).level + '%' }"></div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Latest Experience</h2>
       <div class="space-y-6">
         <div v-for="exp in experience" :key="exp.company" class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
           <h3 class="font-semibold text-xl text-gray-900 dark:text-white">{{ exp.position }}</h3>
@@ -47,13 +61,24 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 
 const skills = [
-  { name: "DevOps", level: 90 },
+  { name: "DevOps Technologies", level: 92 },
   { name: "AWS", level: 85 },
-  { name: "Kubernetes", level: 85 },
+  { name: "Kubernetes", level: 90 },
   { name: "Docker", level: 90 },
   { name: "CI/CD", level: 85 },
   { name: "Infrastructure as Code", level: 80 },
+  { name: "Vue.js", level: 80 },
+  { name: "Nuxt.js", level: 80 },
+  { name: "JavaScript/TypeScript", level: 75 },
+  { name: "TailwindCSS", level: 80 },
+  { name: "Node.js", level: 40 },
 ];
+
+const skillCategories = {
+  devops: ["DevOps Technologies", "AWS", "Kubernetes", "Docker", "CI/CD", "Infrastructure as Code"],
+  frontend: ["Vue.js", "Nuxt.js", "JavaScript/TypeScript", "TailwindCSS"],
+  backend: ["Node.js"],
+};
 
 onMounted(() => {
   gsap.from(".animate-fade-in", {
