@@ -22,9 +22,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/ui": "^2.19.2",
-    "@nuxtjs/tailwindcss": "^6.8.0"
-  },
-  "overrides": {
-    "rollup": "npm:@rollup/wasm-node"
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@rollup/wasm-node": "latest"
   }
 }
