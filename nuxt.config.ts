@@ -50,6 +50,11 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      NUXT_MAIL_TARGET: process.env.NUXT_MAIL_TARGET,
+      NUXT_MAIL_SMPT: process.env.NUXT_MAIL_SMPT,
+      NUXT_MAIL_PORT: process.env.NUXT_MAIL_PORT,
+      NUXT_MAIL_USERNAME: process.env.NUXT_MAIL_USERNAME,
+      NUXT_MAIL_PASSWORD: process.env.NUXT_MAIL_PASSWORD,
       baseurl: process.env.BASE_URL ?? "http://localhost:3000",
     },
   },
