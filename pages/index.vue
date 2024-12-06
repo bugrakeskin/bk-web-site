@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen bg-gray-100 dark:bg-gray-800 md:flex md:items-center">
-    <div class="container mx-auto px-4 py-16 md:-mt-16">
+  <div>
+    <div class="md:flex md:items-center md:-mt-16">
       <!-- About Section -->
       <div class="max-w-2xl mx-auto">
         <h2 class="text-3xl font-semibold mb-6 text-gray-900 dark:text-white">Hello World!</h2>
@@ -12,15 +12,6 @@
           <NuxtLink to="/projects" class="name-link relative inline-block bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-2 hover:bg-amber-500 dark:hover:bg-amber-500 hover:text-white transition-colors">projects.</NuxtLink>
         </p>
       </div>
-
-      <!-- Projects Grid -->
-      <!--   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div v-for="i in 3" :key="i" 
-             class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform">
-          <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Project {{ i }}</h3>
-          <p class="text-gray-600 dark:text-gray-300">Description of project {{ i }}. Click to learn more.</p>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
