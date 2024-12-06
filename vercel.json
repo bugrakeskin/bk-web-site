@@ -8,6 +8,5 @@
       "use": "@nuxtjs/vercel-builder"
     }
   ],
-  "framework": "nuxt",
-  "packageManager": "npm"
+  "framework": "nuxt"
 }
