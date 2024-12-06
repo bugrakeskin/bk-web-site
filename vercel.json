@@ -1,5 +1,11 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "ROLLUP_WASM=1 npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install"
+  "installCommand": "ROLLUP_WASM=1 npm install",
+  "builds": [
+    {
+      "src": "nuxt.config.ts",
+      "use": "@nuxtjs/vercel-builder"
+    }
+  ]
 }
