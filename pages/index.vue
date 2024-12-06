@@ -1,21 +1,15 @@
 <template>
-  <div class="min-h-screen bg-gray-100 dark:bg-gray-800">
-    <div class="container mx-auto px-4 py-16">
-      <!-- Hero Section -->
-      <div class="text-center mb-16">
-        <h1 class="text-6xl font-bold mb-4 animate-fade-in text-gray-900 dark:text-white">Hello!</h1>
-        <p class="text-xl text-gray-600 dark:text-gray-300 animate-slide-up">Welcome to my personal space</p>
-      </div>
-
+  <div class="min-h-screen bg-gray-100 dark:bg-gray-800 md:flex md:items-center">
+    <div class="container mx-auto px-4 py-16 md:-mt-16">
       <!-- About Section -->
-      <div class="max-w-2xl mx-auto mb-16">
+      <div class="max-w-2xl mx-auto">
         <h2 class="text-3xl font-semibold mb-6 text-gray-900 dark:text-white">Hello World!</h2>
         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
           I'm <NuxtLink to="/about" class="name-link relative inline-block bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-2 hover:bg-amber-500 dark:hover:bg-amber-500 hover:text-white transition-colors">Buğra Keskin</NuxtLink>, a seasoned IT professional with 15 years of experience, currently specializing in DevOps engineering. With a
           comprehensive background in cloud infrastructure and modern development practices, I architect and implement robust DevOps solutions using Kubernetes, Docker, and various monitoring tools. My expertise spans across both traditional and cloud-native technologies, from containerization to CI/CD pipelines. I'm particularly passionate about
           automation, infrastructure as code, and creating efficient, scalable systems. Currently expanding my cloud expertise with AWS while maintaining proficiency in frontend development using Vue.js and Nuxt.js. Get to know a bit more
           <NuxtLink to="/about" class="name-link relative inline-block bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-2 hover:bg-amber-500 dark:hover:bg-amber-500 hover:text-white transition-colors">about my skills </NuxtLink> or feel free to look around my
-          <NuxtLink to="/about" class="name-link relative inline-block bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-2 hover:bg-amber-500 dark:hover:bg-amber-500 hover:text-white transition-colors">projects.</NuxtLink>
+          <NuxtLink to="/projects" class="name-link relative inline-block bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-2 hover:bg-amber-500 dark:hover:bg-amber-500 hover:text-white transition-colors">projects.</NuxtLink>
         </p>
       </div>
 
