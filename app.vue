@@ -8,41 +8,70 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
 
+// Schema.org configurations
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Buğra Keskin",
+  jobTitle: "DevOps Engineer & Jr. Full Stack Developer",
+  url: "https://bugrakeskin.xyz",
+  sameAs: ["https://twitter.com/bugrakeskin11", "https://github.com/bugrakeskin", "https://linkedin.com/in/bugrakeskin"],
+  knowsAbout: ["DevOps", "Cloud Infrastructure", "Vue.js", "Nuxt.js", "Node.js", "Kubernetes", "Docker"],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Buğra Keskin - Personal Website",
+  url: "https://bugrakeskin.xyz",
+  description: "Expert DevOps Engineer and Jr. Full Stack Developer specializing in Vue.js, Nuxt.js, and cloud infrastructure.",
+};
+
 // Default meta tags
 useHead({
   htmlAttrs: {
-    lang: 'en'
+    lang: "en",
   },
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    { rel: 'canonical', href: config.public.siteUrl }
-  ]
-})
+    { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+    { rel: "canonical", href: config.public.siteUrl },
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify(personSchema),
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify(websiteSchema),
+    },
+  ],
+});
 
 // SEO meta tags
 useSeoMeta({
-  title: 'Buğra Keskin - DevOps Engineer & Jr. Full Stack Developer',
-  titleTemplate: '%s | Buğra Keskin',
-  description: 'DevOps Engineer & Jr. Full Stack Developer with expertise in Vue.js, Nuxt.js, and Node.js. Specializing in cloud infrastructure, automation, and modern web development with a focus on scalable solutions.',
-  
+  title: "DevOps Engineer & Jr. Full Stack Developer",
+  titleTemplate: "%s | BK",
+  description: "Expert DevOps Engineer and Jr. Full Stack Developer specializing in Vue.js, Nuxt.js, and cloud infrastructure. Building scalable solutions with modern web technologies.",
+
   // Open Graph / Facebook
-  ogTitle: 'Buğra Keskin - DevOps Engineer & Jr. Full Stack Developer',
-  ogDescription: 'DevOps Engineer & Jr. Full Stack Developer with expertise in Vue.js, Nuxt.js, and Node.js. Specializing in cloud infrastructure, automation, and modern web development with a focus on scalable solutions.',
+  ogTitle: "DevOps Engineer & Jr. Full Stack Developer | Buğra Keskin",
+  ogDescription: "Expert DevOps Engineer and Jr. Full Stack Developer specializing in Vue.js, Nuxt.js, and cloud infrastructure. Building scalable solutions with modern web technologies.",
   ogImage: `${config.public.siteUrl}/og-image.png`,
   ogUrl: config.public.siteUrl,
-  ogType: 'website',
-  ogSiteName: 'Buğra Keskin Personal Web Site',
-  
+  ogType: "website",
+  ogSiteName: "Buğra Keskin Personal Web Site",
+
   // Twitter
-  twitterCard: 'summary_large_image',
-  twitterTitle: 'Buğra Keskin - DevOps Engineer & Jr. Full Stack Developer',
-  twitterDescription: 'DevOps Engineer & Jr. Full Stack Developer with expertise in Vue.js, Nuxt.js, and Node.js. Specializing in cloud infrastructure, automation, and modern web development with a focus on scalable solutions.',
+  twitterCard: "summary_large_image",
+  twitterTitle: "DevOps Engineer & Jr. Full Stack Developer | Buğra Keskin",
+  twitterDescription: "Expert DevOps Engineer and Jr. Full Stack Developer specializing in Vue.js, Nuxt.js, and cloud infrastructure. Building scalable solutions with modern web technologies.",
   twitterImage: `${config.public.siteUrl}/og-image.png`,
-  twitterSite: '@bugrakeskin11',
-  twitterCreator: '@bugrakeskin11',
+  twitterSite: "@bugrakeskin11",
+  twitterCreator: "@bugrakeskin11",
 
   // Additional Meta
-  author: 'Buğra Keskin',
-  keywords: 'DevOps Engineer, Full Stack Developer, Vue.js, Nuxt.js, Node.js, Cloud Infrastructure, AWS, Kubernetes'
-})
+  author: "Buğra Keskin",
+  keywords: "DevOps Engineer, Jr. Full Stack Developer, Vue.js, Nuxt.js, Node.js, Cloud Infrastructure, AWS, Kubernetes",
+});
 </script>
