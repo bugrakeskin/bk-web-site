@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   extends: ["@nuxt/ui-pro"],
-  modules: ["@nuxt/ui", "@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "nuxt-mail"],
+  modules: ["@nuxt/ui", "@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "nuxt-mail", "nuxt-simple-robots"],
   css: ["~/assets/css/main.scss"],
   googleFonts: {
     families: {
@@ -40,5 +40,11 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: "vercel",
+  },
+  robots: {
+    allow: '/',
+    disallow: '/404',
+    sitemap: process.env.BASE_URL ? `${process.env.BASE_URL}/sitemap.xml` : 'https://bugrakeskin.xyz/sitemap.xml',
+    indexable: true
   },
 });
