@@ -2,10 +2,6 @@
   "name": "nuxt-pro",
   "private": true,
   "type": "module",
-  "engines": {
-    "node": "18.x",
-    "npm": ">=8.0.0"
-  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -22,8 +18,7 @@
     "nuxt-mail": "^5.1.1",
     "sass": "^1.67.0",
     "vue": "latest",
-    "vue-router": "latest",
-    "esbuild": "0.21.5"
+    "vue-router": "latest"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
