@@ -50,7 +50,7 @@ useHead({
 
 // SEO meta tags
 useSeoMeta({
-  title: "Buğra Keskin | Expert DevOps Engineer & Jr. Full Stack Developer",
+  title: "Buğra Keskin | Expert DevOps Engineer",
   titleTemplate: "%s",
   description: "🚀 15+ years in DevOps & Cloud Infrastructure. Expert in Kubernetes, Docker, AWS. Building scalable solutions with Vue.js & Nuxt.js. Let's innovate together!",
 
