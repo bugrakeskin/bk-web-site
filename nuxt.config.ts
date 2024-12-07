@@ -42,9 +42,9 @@ export default defineNuxtConfig({
     preset: "vercel",
   },
   robots: {
-    allow: '/',
-    disallow: '/404',
-    sitemap: process.env.BASE_URL ? `${process.env.BASE_URL}/sitemap.xml` : 'https://bugrakeskin.xyz/sitemap.xml',
-    indexable: true
+    allow: "/",
+    disallow: "/404",
+    sitemap: process.env.BASE_URL ? `${process.env.BASE_URL}/sitemap.xml` : "https://bugrakeskin.xyz/sitemap.xml",
+    indexable: true,
   },
 });

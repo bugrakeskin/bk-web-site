@@ -1,0 +1,4 @@
+const contact_vue_vue_type_style_index_0_scoped_36528d98_lang = ".animate-fade-in[data-v-36528d98]{animation:fadeIn-36528d98 1s ease-out forwards}.animate-slide-up[data-v-36528d98]{animation:slideUp-36528d98 1s ease-out forwards}@keyframes fadeIn-36528d98{0%{opacity:0}to{opacity:1}}@keyframes slideUp-36528d98{0%{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}input[data-v-36528d98],textarea[data-v-36528d98]{--tw-border-opacity:1;border-color:rgb(var(--color-gray-300)/var(--tw-border-opacity,1))}input[data-v-36528d98]:is(.dark *),textarea[data-v-36528d98]:is(.dark *){--tw-border-opacity:1;border-color:rgb(var(--color-gray-600)/var(--tw-border-opacity,1))}";
+
+export { contact_vue_vue_type_style_index_0_scoped_36528d98_lang as c };
+//# sourceMappingURL=contact-styles-1.mjs-YcIz0RdE.mjs.map
