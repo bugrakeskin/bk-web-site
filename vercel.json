@@ -1,0 +1,10 @@
+{
+  "builds": [
+    {
+      "src": "nuxt.config.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install"
+}
