@@ -13,7 +13,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Buğra Keskin",
-  jobTitle: "DevOps Engineer & Jr. Full Stack Developer",
+  jobTitle: "Expert DevOps Engineer & Jr. Full Stack Developer",
   url: "https://bugrakeskin.xyz",
   sameAs: ["https://twitter.com/bugrakeskin11", "https://github.com/bugrakeskin", "https://linkedin.com/in/bugrakeskin"],
   knowsAbout: ["DevOps", "Cloud Infrastructure", "Vue.js", "Nuxt.js", "Node.js", "Kubernetes", "Docker"],
@@ -50,21 +50,21 @@ useHead({
 
 // SEO meta tags
 useSeoMeta({
-  title: "Buğra Keskin | DevOps Engineer & Jr. Full Stack Developer",
-  titleTemplate: "%s | DevOps & Cloud Solutions",
+  title: "Buğra Keskin | Expert DevOps Engineer & Jr. Full Stack Developer",
+  titleTemplate: "%s",
   description: "🚀 15+ years in DevOps & Cloud Infrastructure. Expert in Kubernetes, Docker, AWS. Building scalable solutions with Vue.js & Nuxt.js. Let's innovate together!",
 
   // Open Graph / Facebook
-  ogTitle: "Buğra Keskin | DevOps Engineer & Jr. Full Stack Developer",
+  ogTitle: "Buğra Keskin | Expert DevOps Engineer & Jr. Full Stack Developer",
   ogDescription: "🚀 15+ years in DevOps & Cloud Infrastructure. Expert in Kubernetes, Docker, AWS. Building scalable solutions with Vue.js & Nuxt.js. Let's innovate together!",
   ogImage: `${config.public.siteUrl}/og-image.png`,
   ogUrl: config.public.siteUrl,
   ogType: "website",
-  ogSiteName: "Buğra Keskin - DevOps & Cloud Solutions",
+  ogSiteName: "Buğra Keskin - Expert DevOps Engineer",
 
   // Twitter
   twitterCard: "summary_large_image",
-  twitterTitle: "Buğra Keskin | DevOps Engineer & Jr. Full Stack Developer",
+  twitterTitle: "Buğra Keskin | Expert DevOps Engineer & Jr. Full Stack Developer",
   twitterDescription: "🚀 15+ years in DevOps & Cloud Infrastructure. Expert in Kubernetes, Docker, AWS. Building scalable solutions with Vue.js & Nuxt.js. Let's innovate together!",
   twitterImage: `${config.public.siteUrl}/og-image.png`,
   twitterSite: "@bugrakeskin11",
@@ -72,6 +72,6 @@ useSeoMeta({
 
   // Additional Meta
   author: "Buğra Keskin",
-  keywords: "DevOps Engineer, Cloud Infrastructure, Kubernetes, Docker, AWS, Vue.js, Nuxt.js, Full Stack Development, CI/CD, Infrastructure as Code",
+  keywords: "Expert DevOps Engineer, Cloud Infrastructure, Kubernetes, Docker, AWS, Vue.js, Nuxt.js, Jr. Full Stack Development, CI/CD, Infrastructure as Code",
 });
 </script>

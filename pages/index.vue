@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-[calc(100vh-18rem)] p-4 md:p-2 mt-24 md:mt-0 flex items-center justify-center">
     <div class="max-w-3xl text-center">
-      <h1 class="text-4xl font-bold mb-6 text-start text-gray-900 dark:text-white">DevOps Engineer & Jr. Full Stack Developer</h1>
+      <h1 class="text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">DevOps Engineer & Jr. Full Stack Dev.</h1>
       <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Hello, I'm <NuxtLink to="/about" class="name-link relative inline-block bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-2 hover:bg-amber-500 dark:hover:bg-amber-500 hover:text-white transition-colors">Buğra Keskin</NuxtLink></h2>
       <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
         a seasoned IT professional with 15 years of experience, currently specializing in DevOps engineering. With a comprehensive background in cloud infrastructure and modern development practices, I architect and implement robust DevOps solutions using Kubernetes, Docker, and various monitoring tools. My expertise spans across both traditional

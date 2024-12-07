@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-24">
+  <div class="container mx-auto mt-24 md:mt-32">
     <h1 class="text-4xl font-bold mb-8 text-gray-900 dark:text-white">About Me</h1>
 
     <div class="prose dark:prose-invert max-w-none">
