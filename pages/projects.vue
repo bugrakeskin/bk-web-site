@@ -33,6 +33,14 @@ const projects = [
     demo: "https://shoppinlistv2.vercel.app",
     github: "https://github.com/bugrakeskin/Shopping-List-v2",
   },
+  {
+    title: "Personal Website",
+    description: "My personal website.",
+    image: "https://picsum.photos/800/600?random=2",
+    technologies: ["Vue.js", "Nuxt.js", "Nuxt-UI", "Tailwind CSS", "Nuxt-Mail"],
+    demo: "https://bugrakeskin.xyz",
+    github: "https://github.com/bugrakeskin/bk-web-site",
+  },
 ];
 </script>
 
