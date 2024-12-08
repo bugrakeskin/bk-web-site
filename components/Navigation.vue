@@ -17,7 +17,7 @@
             </NuxtLink>
           </div>
 
-          <UButton size="sm" color="amber" variant="solid" target="_blank" to="/Buğra-Keskin-ENG.pdf" class="hidden md:flex">
+          <UButton size="sm" color="amber" variant="solid" target="_blank" to="/BK-ENG.pdf" class="hidden md:flex">
             <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-4 h-4 mr-1" />
             My Resume [PDF]
           </UButton>
@@ -43,7 +43,7 @@
         <NuxtLink v-for="item in menuItems" :key="item.path" :to="item.path" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" @click="isMenuOpen = false">
           {{ item.name }}
         </NuxtLink>
-        <UButton size="sm" color="amber" variant="solid" target="_blank" to="/Buğra-Keskin-ENG.pdf" class="w-full mt-2">
+        <UButton size="sm" color="amber" variant="solid" target="_blank" to="/BK-ENG.pdf" class="w-full mt-2">
           <UIcon name="i-heroicons-arrow-top-right-on-square" class="w-4 h-4 mr-1" />
           My Resume [PDF]
         </UButton>

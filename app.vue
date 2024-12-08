@@ -72,6 +72,6 @@ useSeoMeta({
 
   // Additional Meta
   author: "Buğra Keskin",
-  keywords: "Expert DevOps Engineer, Cloud Infrastructure, Kubernetes, Docker, AWS, Vue.js, Nuxt.js, Jr. Full Stack Development, CI/CD, Infrastructure as Code",
+  keywords: "Expert DevOps Engineer, Cloud Infrastructure, Kubernetes, Docker, AWS, Vue.js, Nuxt.js, Jr. Full Stack Development, CI/CD, Infrastructure as Code, BK",
 });
 </script>
