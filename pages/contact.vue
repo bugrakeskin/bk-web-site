@@ -34,7 +34,7 @@
             bugra.keskin@gmail.com
           </ULink>
 
-          <NuxtLink to="https://www.linkedin.com/in/bu%C4%9Fra-keskin-29057538/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-400">
+          <NuxtLink to="https://www.linkedin.com/in/bk29057538/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-400">
             <UIcon name="i-simple-icons-linkedin" class="w-5 h-5 mr-2" />
             LinkedIn Profile
           </NuxtLink>
